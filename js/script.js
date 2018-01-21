@@ -40,8 +40,7 @@ $(document).ready(function() {
     function displayform1(){
 
         $(".form-where").html(
-            '                <p>Départ :</p>\n' +
-            '                <label for="departement-depart">Departement :</label><br>\n' +
+            '                <p>Départ :</p>\n'+
             '                <select class="departement" id="departement-depart">\n' +
             '                    <option selected>Departement</option>\n' +
             '                </select><br>\n' +

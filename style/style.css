@@ -42,12 +42,12 @@ body{
 }
 
 .proposer{
-    background-color: #5F84CE;
+    background-color: #1E799C;
     margin-bottom: 6px;
     height: 50%;
 }
 .trouver{
-    background-color: #5F84CE;
+    background-color: #1E799C;
     height: 50%;
 }
 .logo-menu{
@@ -56,4 +56,86 @@ body{
 }
 a{
     text-decoration: none;
+}
+
+/*========================formulaire==============================*/
+
+
+.proposer-content{
+    background-color: #1E799C;
+    padding: 20px 20px;
+    height: 100%;
+}
+
+#date{
+font-size: 12px;
+}
+.proposer-content label, p{
+    color: white;
+    text-shadow: 0 0 1px black;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.proposer-content input, select{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+    border-bottom: 1px solid #D57223;
+    background-color: #1E799C;
+    text-shadow: 0 0 1px black;
+}
+
+.proposer-content input{
+    padding: 3px;
+    color: white;
+    font-size: 12px;
+}
+.proposer-content input:focus{
+    background-color: #68A4BC;
+}
+
+#nbdispo, #type, .departement, #atterro, #deco {
+    background-color: white;
+    color: #1E799C;
+}
+
+#atterro, #deco{
+    width: 100%;
+}
+
+
+.proposer-content select, #nbdispo{
+    font-size: 12px !important;
+    border: none;
+    text-shadow: none;
+    padding: 3px;
+}
+
+#nbdispo{
+    padding: 3px 3px 3px 7px;
+    width: 35px;
+}
+
+#validate-form{
+    background-color: #D57223;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 0 !important;
+    border: 1px solid white;
+}
+
+.form-details, .form-where, .form-users{
+    margin: 20px 0;
+}
+
+#nom, #mail, #tel{
+    width: 100%;
+}
+.proposer-content p{
+    padding: 0;
+    margin: 0;
 }
