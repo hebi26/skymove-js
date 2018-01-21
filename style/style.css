@@ -1,0 +1,59 @@
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 100%;
+    height: 50px;
+    margin: 0;
+}
+.logo-title{
+    height: 50px;
+}
+.logo-accueil{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+}
+.menu-covoit{
+    padding: 0;
+    height: 90vh;
+}
+.choix{
+    text-align: center;
+    color: white;
+    display: flex;
+}
+
+.choix-content{
+    margin: auto;
+}
+.choix h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.proposer{
+    background-color: #5F84CE;
+    margin-bottom: 6px;
+    height: 50%;
+}
+.trouver{
+    background-color: #5F84CE;
+    height: 50%;
+}
+.logo-menu{
+    width: 50px;
+    height: 50px;
+}
+a{
+    text-decoration: none;
+}
