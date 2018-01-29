@@ -6,24 +6,12 @@
     <link rel="stylesheet" href="../style/style.css">
     <script src="../lib/jquery.js"></script>
     <script src="../js/script.js"></script>
-    <title>Trouver</title>
+    <title>Proposer</title>
 </head>
 <body>
 
 <!-- =====================BLOC HEADER PRESENT SUR CHAQUE VUES ==============================-->
 <div class="header">
-    <a href="index.html"><img src="../lib/img/title.png" class="logo-title" alt="logo covoiturage"></a>
+    <a href="index.php"><img src="../lib/img/title.png" class="logo-title" alt="logo covoiturage"></a>
     <a href="#"><img src="../lib/img/home.ico" class="logo-accueil"  alt="logo accueil"></a>
 </div>
-<!-- =================================== ===================================================-->
-
-<!-- ==================================VUE TROUVER ========================================-->
-
-<div class="trouver-content">
-
-    <h1>Trouver</h1>
-
-</div>
-
-</body>
-</html>

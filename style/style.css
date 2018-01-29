@@ -139,3 +139,23 @@ font-size: 12px;
     padding: 0;
     margin: 0;
 }
+/*======================VUE TROUVER=============================*/
+
+.uniqcovoit{
+    width: 100%;
+    padding: 20px 20px;
+    background-color: #1E799C;
+    color: white;
+    margin-bottom: 7px;
+}
+
+.return-msg{
+    text-align: center;
+    width: 100%;
+}
+.return-msg-success{
+    color: yellowgreen;
+}
+.return-msg-ko{
+    color: darkred;
+}

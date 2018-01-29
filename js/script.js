@@ -4,23 +4,45 @@ $(document).ready(function() {
         selectType();
     });
 
-    $('.create').submit(function(e){
+    // ===================FUNCTION SOUMISSION FORMULAIRE================================
 
+    $('#create').on('submit', function (e) {
+        // On empêche le navigateur de soumettre le formulaire
         e.preventDefault();
 
-        var date= $('#date').val();
-        var nbdispo= $('#nbdispo').val();
-        var type= $('#type').val();
-        var nom= $('#nom').val();
-        var mail= $('#mail').val();
-        var tel= $('#tel').val();
-        var atterro= $('#atterro').val();
-        var deco= $('#deco').val();
-        var autocomplete= $('#autocomplete-google-map').val();
+        var $form = $(this);
 
-        alert('date: '+ date + ' | places disponibles : ' + nbdispo + ' | type de covoit : ' + type + ' | identité : ' + nom + ' | email : ' + mail +
-              ' | tel : ' + tel + ' | depart : ' + atterro + ' ' + autocomplete + ' | arrivée : ' + deco);
+        $.ajax({
+            url: $form.attr('action'),
+            type: $form.attr('method'),
+            data: $form.serialize(),
 
+            success: function(){
+                $(".create-form").html(
+                    '<h3 class="return-msg return-msg-success">Covoit enregistré avec succès</h3>'+
+                    '<a href="index.php">Retour</a>'
+                );
+            },
+            error: function(){
+                $(".create-form").html('<h3 class="return-msg return-msg-ko">ERREUR D\'ENREGISTREMENT</h3>');
+            }
+        });
+    });
+
+    // =======================FUNCTION LISTER================================
+
+    $('#btnlist').click(function() {
+        $.ajax({
+            url: '../PHP/display.php',
+            type: 'get',
+            success: function (data) {
+
+                $(".trouver-display").html('<h3>Liste des covoit</h3>' + data);
+            },
+            error: function(){
+                $(".trouver-display").html('<h3 class="return-msg return-msg-ko">ERREUR LORS DE LA RECUPERATION DES DONNEES</h3>');
+            }
+        });
     });
 
     //--------------FUNCTION SELECTION TYPE FORM------------------------------------//
@@ -41,15 +63,15 @@ $(document).ready(function() {
 
         $(".form-where").html(
             '                <p>Départ :</p>\n'+
-            '                <select class="departement" id="departement-depart">\n' +
+            '                <select class="departement" id="departement-depart" name="departement">\n' +
             '                    <option selected>Departement</option>\n' +
             '                </select><br>\n' +
-            '                <select id="atterro">\n' +
+            '                <select id="atterro" name="atterro">\n' +
             '                    <option selected>Atterro</option>\n' +
             '                </select><br>\n' +
             '\n' +
             '                <p>Arrivée :</p>\n' +
-            '                <select id="deco">\n' +
+            '                <select id="deco" name="deco">\n' +
             '                    <option selected>Deco</option>\n' +
             '                </select><br><br>'
         );
@@ -62,12 +84,12 @@ $(document).ready(function() {
         $('.form-where').html(
 
             '                <label for="autocomplete-google-map">Départ : </label><br>\n'+
-            '                <input type="text" id="autocomplete-google-map" placeholder="ex: Nîmes"><br>\n' +
+            '                <input type="text" id="autocomplete-google-map" name="autocomplete-google-map" placeholder="ex: Nîmes"><br>\n' +
             '                <p>Arrivée :</p>\n' +
-            '                <select class="departement" id="departement-arrive">\n' +
+            '                <select class="departement" id="departement-arrive" name="departement">\n' +
             '                    <option selected>Departement</option>\n' +
             '                </select><br>\n' +
-            '                <select id="deco">\n' +
+            '                <select id="deco" name="deco">\n' +
             '                    <option selected>Deco</option>\n' +
             '                </select><br><br>'
         );
