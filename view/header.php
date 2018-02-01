@@ -12,6 +12,6 @@
 
 <!-- =====================BLOC HEADER PRESENT SUR CHAQUE VUES ==============================-->
 <div class="header">
-    <a href="index.php"><img src="../lib/img/title.png" class="logo-title" alt="logo covoiturage"></a>
+    <a href="/index.php"><img src="../lib/img/title.png" class="logo-title" alt="logo covoiturage"></a>
     <a href="#"><img src="../lib/img/home.ico" class="logo-accueil"  alt="logo accueil"></a>
 </div>
